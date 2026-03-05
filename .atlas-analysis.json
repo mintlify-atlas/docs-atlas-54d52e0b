@@ -1,0 +1,72 @@
+{
+  "projectType": "general",
+  "projectName": "CryptoTracker Web",
+  "projectDescription": "A distributed web application for tracking cryptocurrency prices in real-time with historical charts, comparison tools, and linear regression analysis.",
+  "theme": "almond",
+  "primaryColor": "#545454",
+  "lightColor": "#159944",
+  "darkColor": "#f3f2d5",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Get Started",
+        "pages": [
+          "introduction",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Architecture",
+        "pages": [
+          "architecture/overview",
+          "architecture/microservices",
+          "architecture/deployment"
+        ]
+      },
+      {
+        "group": "API Reference",
+        "pages": [
+          "api/webserver",
+          "api/grafico-service",
+          "api/recolector"
+        ]
+      },
+      {
+        "group": "Features",
+        "pages": [
+          "features/real-time-prices",
+          "features/historical-charts",
+          "features/comparison",
+          "features/regression-analysis"
+        ]
+      },
+      {
+        "group": "Frontend",
+        "pages": [
+          "frontend/interface",
+          "frontend/configuration"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Real-time cryptocurrency price tracking for 10 major cryptocurrencies",
+    "Historical price variation charts with customizable time ranges",
+    "Multi-cryptocurrency comparison with normalized price visualization",
+    "Linear regression analysis for price trend prediction",
+    "Distributed microservices architecture deployed on Google Cloud",
+    "MySQL database for historical data storage",
+    "Integration with CoinGecko public API",
+    "Responsive web interface with live updates"
+  ],
+  "publicApiSurface": [
+    "GET /status - Health check endpoint (WebServer)",
+    "GET /precios - Fetch current prices for all cryptocurrencies",
+    "GET /grafico?crypto={crypto}&horas={hours} - Generate individual price chart",
+    "GET /graficos-todas?horas={hours} - Generate charts for all cryptocurrencies",
+    "GET /graficoCompara?cryptos={list}&inicio={datetime}&fin={datetime} - Compare multiple cryptocurrencies",
+    "GET /regresion?crypto={crypto}&inicio={hour}&fin={hour} - Linear regression analysis",
+    "RecolectorPrecios - Background service that collects prices every 60 seconds",
+    "Supported cryptocurrencies: Bitcoin, Ethereum, XRP, Solana, TRON, Dogecoin, Cardano, Hyperliquid, Bitcoin Cash, Chainlink"
+  ]
+}
